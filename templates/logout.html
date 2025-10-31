@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>STOCKIFY - Logout</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    h1 {
+      color: #ffcc00;
+      font-size: 50px;
+      text-shadow: 0 0 20px orange;
+    }
+
+    .box {
+      background: white;
+      color: black;
+      width: 380px;
+      margin: 50px auto;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 0 40px orange;
+    }
+
+    h2 {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 10px 0 20px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .glow-btn {
+      margin-top: 10px;
+      padding: 12px 35px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      color: black;
+      background: linear-gradient(90deg, #ff9900, #ff3300);
+      box-shadow: 0 0 20px orange, 0 0 30px red inset;
+      transition: 0.3s ease-in-out;
+    }
+
+    .glow-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 40px red, 0 0 60px orange inset;
+      background: linear-gradient(90deg, #ff3300, #ffaa00);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎃 STOCKIFY 🎃</h1>
+
+  <div class="box">
+    <h2>Thank You, {{ name }}!</h2>
+    <p>{{ time }}</p>
+    <form action="{{ url_for('login') }}">
+      <button class="glow-btn">⬅️ Back to Login</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>STOCKIFY - Crew Dashboard</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      color: orange;
+      font-size: 40px;
+      letter-spacing: 2px;
+    }
+    details {
+      margin: 15px auto;
+      background: #222;
+      border-radius: 15px;
+      padding: 15px;
+      width: 70%;
+      box-shadow: 0 0 10px orange;
+      transition: 0.3s;
+    }
+    summary {
+      font-size: 24px;
+      cursor: pointer;
+      color: #f5a623;
+    }
+    summary:hover {
+      color: #ffcc00;
+    }
+    table {
+      width: 90%;
+      margin: 10px auto;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #444;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background: #f5a623;
+      color: black;
+    }
+    input[type="number"] {
+      width: 80px;
+      padding: 5px;
+      border-radius: 8px;
+      border: none;
+      text-align: center;
+    }
+    .btn {
+      margin: 20px 10px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .submit-btn {
+      background: linear-gradient(90deg, orange, red);
+      color: black;
+      box-shadow: 0 0 20px orange;
+    }
+    .submit-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px red;
+    }
+    .logout-btn {
+      background: linear-gradient(90deg, gray, white);
+      color: black;
+      box-shadow: 0 0 20px white;
+    }
+    .logout-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px orange;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎃 STOCKIFY 🎃</h1>
+
+  <form method="POST">
+    <!-- Meals -->
+    <details>
+      <summary>🍽️ Meals</summary>
+      <table>
+        <tr><th>Product</th><th>Price (₱)</th><th>Sold</th></tr>
+        <tr><td>Tapsilog</td><td>85</td><td><input type="number" name="tapsilog"></td></tr>
+        <tr><td>Cornsilog</td><td>80</td><td><input type="number" name="cornsilog"></td></tr>
+        <tr><td>Hotsilog</td><td>70</td><td><input type="number" name="hotsilog"></td></tr>
+        <tr><td>Longsilog</td><td>75</td><td><input type="number" name="longsilog"></td></tr>
+        <tr><td>Bangusilog</td><td>90</td><td><input type="number" name="bangusilog"></td></tr>
+      </table>
+    </details>
+
+    <!-- Burger -->
+    <details>
+      <summary>🍔 Burger</summary>
+      <table>
+        <tr><th>Product</th><th>Price (₱)</th><th>Sold</th></tr>
+        <tr><td>Plain Burger</td><td>45</td><td><input type="number" name="plainburger"></td></tr>
+        <tr><td>Cheesy Burger</td><td>55</td><td><input type="number" name="cheesyburger"></td></tr>
+      </table>
+    </details>
+
+    <!-- Fries -->
+    <details>
+      <summary>🍟 Fries</summary>
+      <table>
+        <tr><th>Size</th><th>Price (₱)</th><th>Sold</th></tr>
+        <tr><td>Small</td><td>30</td><td><input type="number" name="smallfries"></td></tr>
+        <tr><td>Medium</td><td>45</td><td><input type="number" name="mediumfries"></td></tr>
+        <tr><td>Large</td><td>60</td><td><input type="number" name="largefries"></td></tr>
+      </table>
+    </details>
+
+    <!-- Soup -->
+    <details>
+      <summary>🍲 Soup</summary>
+      <table>
+        <tr><th>Product</th><th>Price (₱)</th><th>Sold</th></tr>
+        <tr><td>Pares</td><td>70</td><td><input type="number" name="pares"></td></tr>
+        <tr><td>Mami</td><td>65</td><td><input type="number" name="mami"></td></tr>
+      </table>
+    </details>
+
+    <!-- Drinks -->
+    <details>
+      <summary>🥤 Drinks</summary>
+      <table>
+        <tr><th>Product</th><th>Price (₱)</th><th>Sold</th></tr>
+        <tr><td>Water</td><td>20</td><td><input type="number" name="water"></td></tr>
+        <tr><td>Royal</td><td>30</td><td><input type="number" name="royal"></td></tr>
+        <tr><td>Coke</td><td>30</td><td><input type="number" name="coke"></td></tr>
+        <tr><td>Sprite</td><td>30</td><td><input type="number" name="sprite"></td></tr>
+      </table>
+    </details>
+
+    <button type="submit" class="btn submit-btn">🚀 Submit Sales</button>
+    <a href="{{ url_for('logout') }}" class="btn logout-btn">🔒 Logout</a>
+  </form>
+</body>
+</html>
